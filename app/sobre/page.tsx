@@ -8,96 +8,70 @@ export default function SobreNos() {
     const router = useRouter()
 
     return (
-        
-<main className="min-h-screen bg-gray-200 font-sans overflow-x-hidden">
-            {/* Header Responsivo */}
-            
-   <header className="header-shell z-20 grid grid-cols-3 items-center h-[100px] bg-white rounded-2xl shadow-md mx-[200px] px-[50px]">
-
-        <button
-            type="button"
-            onClick={() => router.push("/landing")}
-            className="header-brand group inline-flex w-fit items-center gap-4 cursor-pointer rounded-2xl px-3 py-2
-            transition-all duration-300
-            hover:hover:scale-[1.1]
-            active:scale-[0.99]">
-
-            <Image
-                src="/images/telemed.png"
-                alt="Logo Connect"
-                width={88}
-                height={88}
-                className=" object-contain rounded-md
-                transition-all duration-300
-                group-hover:scale-[1.03]"
-                priority/>
-
-            <span
-                className="text-4xl font-bold text-[#2a9d8a]
-                transition-all duration-300
-                group-hover:text-[#2a9d8a]">
+        <main className="min-h-screen bg-gray-200 font-sans overflow-x-hidden py-10">
+            {/* Header Responsivo - Removido mx-[200px] e grid rígido */}
+            <header className="header-shell z-20 flex items-center h-[100px] bg-white rounded-2xl shadow-md">
                 
-                MED CONNECT
-            </span>
-        </button>
+                <button
+                    type="button"
+                    onClick={() => router.push("/landing")}
+                    className="header-brand group inline-flex w-fit items-center gap-4 cursor-pointer rounded-2xl px-3 py-2 transition-all duration-300 hover:scale-[1.1] active:scale-[0.99]">
 
-        <div className="header-nav flex text-xl gap-20">
+                    <Image
+                        src="/images/telemed.png"
+                        alt="Logo Connect"
+                        width={88}
+                        height={88}
+                        className="object-contain rounded-md transition-all duration-300 group-hover:scale-[1.03]"
+                        priority />
 
-            <button
-                type="button"
-                onClick={() => router.push("/como")}
-                className="group relative px-8 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
-                
-                <span className="relative z-10 font-medium whitespace-nowrap">Como Funciona</span>
+                    <span className="text-4xl font-bold text-[#2a9d8a] transition-all duration-300">
+                        MED CONNECT
+                    </span>
+                </button>
 
-                <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-                <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-            </button>
+                {/* Nav centralizada com flex-1 */}
+                <div className="header-nav flex flex-1 justify-center text-xl gap-10 lg:gap-20">
+                    <button
+                        type="button"
+                        onClick={() => router.push("/como")}
+                        className="group relative px-4 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
+                        <span className="relative z-10 font-medium whitespace-nowrap">Como Funciona</span>
+                        <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                        <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                    </button>
 
-            <button
-                type="button"
-                onClick={() => router.push("/especialidades")}
-                className="group relative px-8 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
-                
-                <span className="relative z-10 font-medium">Especialidades</span>
+                    <button
+                        type="button"
+                        onClick={() => router.push("/especialidades")}
+                        className="group relative px-4 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
+                        <span className="relative z-10 font-medium">Especialidades</span>
+                        <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                        <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                    </button>
 
-                <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-                <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-            </button>
+                    <button
+                        type="button"
+                        onClick={() => router.push("/sobre")}
+                        className="group relative px-4 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
+                        <span className="relative z-10 font-medium whitespace-nowrap">Sobre Nós</span>
+                        <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                        <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
+                    </button>
+                </div>
 
-              <button
-                type="button"
-                onClick={() => router.push("/sobre")}
-                className="group relative px-8 py-3 text-black transition-all duration-300 hover:text-[#2a9d8a]">
+                <div className="flex justify-end">
+                    <button
+                        type="button"
+                        onClick={() => router.push("/login")}
+                        className="relative overflow-hidden flex rounded-xl bg-[#2a9d8a] text-white shadow-md px-7 py-3 whitespace-nowrap transition-all duration-300 hover:scale-[1.05]">
+                        <span className="relative z-10">Agendar consulta gratuita</span>
+                    </button>
+                </div>
+            </header>
 
-                <span className="relative z-10 font-medium whitespace-nowrap">Sobre Nós</span>
-
-                <span className="absolute left-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-                <span className="absolute right-0 top-1/2 w-[2px] h-0 -translate-y-1/2 rounded-full bg-[#2a9d8a] transition-all duration-300 group-hover:h-10" />
-            </button>
-        </div>
-
-        <div className="w-1/5 flex justify-end ml-auto mb-13">
-            <button 
-                type="button" 
-                onClick={() => router.push("/login")} 
-                className="absolute overflow-hidden flex rounded-xl bg-[#2a9d8a] text-white shadow-md px-7 py-3 whitespace-nowrap
-                transition-all duration-300
-                hover:scale-[1.02]
-                before:absolute before:inset-0
-                before:bg-white/0
-                before:transition-all before:duration-300
-                hover:before:bg-white/15">
-
-                <span className="relative z-10">Agendar consulta gratuita</span>
-            </button>
-        </div>
-
-    </header>
-
-            {/* Seção Principal - Storytelling Ajustada */}
-            <section className="relative flex flex-col md:flex-row rounded-2xl bg-white shadow-lg min-h-[550px] mt-10 max-w-[1200px] mx-auto overflow-hidden">
-                
+            {/* Seção Principal - Agora usa a classe main-card para alinhar com o header */}
+            <section className="main-card relative flex flex-col md:flex-row rounded-2xl bg-white shadow-lg min-h-[550px] mt-10 overflow-hidden">
                 <div className="flex flex-col justify-center p-10 md:p-20 lg:w-[60%] z-10">
                     <h2 className="text-5xl font-bold text-[#2a9d8a] mb-2">Nossa História</h2>
                     <h3 className="text-2xl font-semibold text-gray-600 mb-8">Democratizando a Saúde de Qualidade</h3>
@@ -112,7 +86,6 @@ export default function SobreNos() {
                     </div>
                 </div>
 
-                {/* Imagem Lateral com a Máscara Suave */}
                 <div className="relative h-64 md:h-auto md:flex-1">
                     <div className="absolute inset-0" 
                          style={{ 
@@ -130,9 +103,9 @@ export default function SobreNos() {
                 </div>
             </section>
 
-            {/* Grid de Valores (Mesmo padrão visual dos seus outros cards) */}
-            <section className="max-w-[1200px] mx-auto mt-10 mb-20 px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Grid de Valores - Também usando main-card para manter o alinhamento vertical */}
+            <section className="main-card mt-10 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                     <div className="bg-white rounded-2xl shadow-md p-8 flex items-center gap-5 border-l-4 border-[#2a9d8a]">
                         <div className="text-4xl">🎯</div>
                         <div>
