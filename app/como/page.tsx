@@ -4,6 +4,8 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 import './header.css'
+import './principal.css'
+import './cards.css'
 
 export default function ComoFunciona() {
 
@@ -108,7 +110,7 @@ export default function ComoFunciona() {
     </header>
 
 
-    <section className="relative overflow-visible flex rounded-2xl bg-white shadow-md h-[600px] mt-5 mx-50">     
+    <section className="relative overflow-visible flex rounded-2xl bg-white shadow-md h-[600px] mt-5 mx-50">
             
             <div className="absolute right-0 top-0 h-full w-[80%] overflow-hidden rounded-r-2xl"
                 style={{
@@ -128,59 +130,44 @@ export default function ComoFunciona() {
                 <div className="absolute inset-0 bg-[#2a9d8a]/20" />
             </div>
 
-            <div className="class-cards relative z-20 flex justify-end items-end">
+            <div className="class-cards absolute bottom-0 z-10 pointer-events-none">
                 <Image
                   src="/images/landing/med1.png"
                   alt="Médica"
                   width={500}
                   height={500}
-                  className="class-cards object-contain flex justify-end items-end"
+                  className="w-full h-auto object-contain"
                   priority
                 />
             </div>
 
-      <div className="flex flex-col justify-center px-[70px] w-full">
-        <div className="flex items-start w-full ml-5">
+            
 
+        <div className="cards-content">
+            <div className="cards-row">
 
-        <div className="relative w-[260px] mr-15">
-          <div className="absolute -top-7 left-30 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[#2a9d8a] border-4 border-white shadow-sm text-[40px] font-bold text-[#fdfdfd]">
-                1
-          </div>
+                <div className="card-item">
+                    <div className="card-number">1</div>
+                        <div className="card-box"></div>
+                </div>
 
-        <div className="card-minimal min-w-[300px] min-h-[400px] rounded-3xl bg-[#fdfdfd] shadow-sm border border-[#e8f3f0]"></div>
-      </div>
+                <div className="card-item">
+                    <div className="card-number">2</div>
+                        <div className="card-box"></div>
+                </div>
+                
+                <div className="card-item">
+                    <div className="card-number">3</div>
+                        <div className="card-box"></div>
+                </div>
 
+                <div className="card-item">
+                    <div className="card-number">4</div>
+                        <div className="card-box"></div>
+                </div>
 
-          <div className="relative w-[260px] mr-15">
-            <div className="absolute -top-7 left-30 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[#2a9d8a] border-4 border-white shadow-sm text-[40px] font-bold text-[#fdfdfd]">
-                2
             </div>
-
-          <div className="card-minimal min-w-[300px] min-h-[400px] rounded-3xl bg-[#fdfdfd] shadow-sm border border-[#e8f3f0]"></div>
-          </div>
-
-
-        <div className="relative w-[260px] mr-15">
-          <div className="absolute -top-7 left-30 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[#2a9d8a] border-4 border-white shadow-sm text-[40px] font-bold text-[#fdfdfd]">
-                3
-          </div>
-          
-        <div className="card-minimal min-w-[300px] min-h-[400px] rounded-2xl bg-[#fdfdfd] shadow-sm border border-[#e8f3f0]"></div>
         </div>
-
-      
-          <div className="relative w-[260px] mr-15">
-            <div className="absolute -top-7 left-30 z-10 flex items-center justify-center w-14 h-14 rounded-full bg-[#2a9d8a] border-4 border-white shadow-sm text-[40px] font-bold text-[#fdfdfd]">
-                4
-            </div>
-
-          <div className="card-minimal min-w-[300px] min-h-[400px] rounded-2xl bg-[#fdfdfd] shadow-sm border border-[#e8f3f0]"></div>
-          </div>
-
-        </div>
-
-      </div>
 
         <div className="absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-[50%] z-30">
         
@@ -278,6 +265,5 @@ export default function ComoFunciona() {
     </section>
 
 </main>
-
   )
 }

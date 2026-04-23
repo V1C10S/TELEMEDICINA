@@ -155,7 +155,7 @@ export default function Landing() {
                   className="object-cover scale-105 blur-[7px] brightness-100 saturate-65"
                   priority
                 />
-                <div className="absolute inset-0 bg-[#2a9d8a]/20" />
+                <div className="absolute  inset-0 bg-[#2a9d8a]/20" />
             </div>
         </div>
 
